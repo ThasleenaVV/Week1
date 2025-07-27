@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliance Digital</title>
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+            height: auto;
+            font-family: sans-serif;
+        }
+
+        header {
+            background-color: red;
+            padding: 20px;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar input {
+            width: 40%;
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .navbar nav a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        .navbar h1 span {
+            color: rgb(29, 180, 231);
+        }
+
+        .category-menu {
+            display: flex;
+            gap: 30px;
+            background-color: white;
+            padding: 10px 20px;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .category-menu span {
+            cursor: pointer;
+            color: black;
+            font-weight: 500;
+        }
+
+        h1,
+        h2 {
+            margin: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 250px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            object-fit: contain;
+         }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .off {
+            color: orange;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .offer-badge {
+            background-color: #227dc7;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .footer-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-col {
+            flex: 1 1 200px;
+        }
+
+        .footer-col h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #444;
+        }
+
+        .footer-col ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .footer hr {
+            margin: 30px 0 15px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer p {
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+
+        img.full-width {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="/"></a>
+            <!-- <h1>Reliance <span>digital</span></h1> -->
+            <a data-v-92f925ee="" tabindex="0" href="/" aria-label="reliance digital logo"
+                class="nav-icon company-logo"><span data-v-92f925ee=""><img data-v-92f925ee=""
+                        src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/jioretailer/company/1/applications/645a057875d8c4882b096f7e/application/pictures/free-logo/original/OhLa8p_da-Reliance-Digital.webp"
+                        height="40px" alt="Reliance Digital"></span></a>
+            <input type="text" placeholder="Search products & Brands">
+            <nav>
+                <a href="#">Login</a>
+                <a href="#">Wishlist</a>
+                <a href="#">Cart</a>
+            </nav>
+        </div>
+    </header>
+    <div class="category-menu">
+        <span>All categories</span>
+        <span>Super Saver</span>
+        <span>Televisions</span>
+        <span>Mobiles</span>
+        <span>Earphones</span>
+        <span>Refrigerators</span>
+        <span>Laptops</span>
+        <span>Kitchen appliances</span>
+        <span>Smart watches</span>
+        <span>Washing machines</span>
+        <span>Airconditioners</span>
+        <span>%Bank offers</span>
+    </div>
+
+    <img class="full-width"
+        src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/company/1/applications/645a057875d8c4882b096f7e/theme/pictures/free/original/theme-image-1753098311064.jpeg" />
+
+    <h1>Recently viewed</h1>
+    <div class="product-container">
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/u7HCx3uBGf-ipad-11th-gen-wifi-494494354-i-1-1200wx1200h.jpeg" />
+            <p class="product-name">Apple iPad A16 11th Gen 2025 27.59 cm (11 inch) Wi-Fi Tablet, 128 GB, Pink</p>
+            <p class="price">₹32900 <span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹34900.00</p>
+        </div>
+
+        <div class="product-card">
+            <div class="offer-badge">10K Instant CB+6m NCEMI</div>
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/Hj9ONMUI3N-apple-macbook-air-494494495-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Apple MW123HN/A MacBook Air (Apple M4 Chip/16 GB/256 GB SSD/MacOS Sequoia/Liquid
+                Retina), 34.46 cm (13.6 inch)</p>
+            <p class="price">₹91,099.00 <span class="off">8% OFF</span></p>
+            <p class="mrp">MRP ₹99,900.00</p>
+        </div>
+
+
+        <div class="product-card">
+            <div class="offer-badge">2K Instant CB+6m NCEMI</div>
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/F96i8FczNS-ipad-11th-gen-wifi-494494355-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Apple iPad A16 11th Gen 2025<br>27.59cm(11 inch) Wi-Fi Tablet"</p>
+            <p class="price">₹31990 <span class="off">8% OFF</span></p>
+            <p class="mrp">MRP ₹31990.00</p>
+        </div>
+
+        <div class="product-card">
+            <div class="offer-badge">2K Instant CB+6m NCEMI</div>
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/J8PQCmNTRg-lenovoideatabpro-494494559-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Lenovo Idea Tab Pro 32.25 cm (12.7 inch)<br> WiFi Tablet with Pen, 256 GB, <br>12 GB
+                RAM, Luna Grey, ZAE40195IN"</p>
+            <p class="price">₹30,999.00 <span class="off">37% OFF</span></p>
+            <p class="mrp">MRP ₹30,999.00</p>
+        </div>
+
+        <div class="product-card">
+            <div class="offer-badge">2K Instant CB+6m NCEMI</div>
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/eZtlZbIuh6-apple-mly23hn-a-laptop-492850655-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Apple MLY23HNA MacBook Air (Apple M2 Chip/8GB/512GB SSD/macOS/Liquid Retina), 34.46
+                cm (13.6 inch), Starlight</p>
+            <p class="price">₹1,04,401.00 <span class="off">37% OFF</span></p>
+            <p class="mrp">MRP ₹1,09,900.00</p>
+        </div>
+    </div>
+    <img src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/company/1/applications/645a057875d8c4882b096f7e/theme/pictures/free/original/theme-image-1750156115438.jpeg"
+        width="1550px">
+
+    <h1>Great Deals on Electronics</h1>
+    <div class="product-container">
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/oXiLEmOhwD-xiaomi-l32mb-fin-tv-494581423-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Xiaomi F Series 81.28 cm (32 inch) HD Ready Smart TV, L32MB-FIN</p>
+            <p class="price">13,499.00 <span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹24,999.00</p>
+        </div>
+
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:250/CD7P6WJCB5-lg-32-h-smart-494623565-i-1-1200wx1200h.jpeg">
+            <p class="product-name">LG 80 cm (32 inch)HD Ready Smart webOS LED TV, 32LR570B6LA</p>
+            <p class="price">₹14,490.00 <span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹21240.00</p>
+        </div>
+
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:150/UxQ4TnhDQl-lg-fhv1409z2m-washing-machinees-493620608-i-1-1200wx1200h.jpeg">
+            <p class="product-name">LG 9 Kg Front Load Fully Automatic Washing Machine, FHV1409Z2M, Middle Black</p>
+            <p class="price">₹36,490.00<span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹55,990.00</p>
+        </div>
+
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/AV3i3Bn6dd-haier-hrt-683is-refrigerator-492664773-i-1-1200wx1200h.jpeg">
+            <p class="product-name">Haier 598 liters Side-by-Side Refrigerator, Inox Steel HRT-683IS</p>
+            <p class="price">₹90,990.00 <span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹1,35,890.00</p>
+        </div>
+
+        <div class="product-card">
+            <img
+                src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:450/Gp1XS6dtCl-lg-sac-1t-ts-q14cnze-581110634-i-1-1200wx1200h.jpeg">
+            <p class="product-name">LG 1 Ton 5 Star 6 in 1 Convertible Inverter Split AC, TS-Q14CNZE (4 Way Swing,
+                Viraat Mode, Smart Diagnosis System, 100% Copper, 2024 Launch)</p>
+            <p class="price">₹34,490.00 <span class="off">6% OFF</span></p>
+            <p class="mrp">MRP ₹41,990.00</p>
+        </div>
+    </div>
+
+    <img src="https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/company/1/applications/645a057875d8c4882b096f7e/theme/pictures/free/original/theme-image-1753272086176.jpeg"
+        width="1550">
+
+    <footer class="footer">
+        <div class="footer-columns">
+            <!-- Customer Service -->
+            <div class="footer-col">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Cancellations</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="footer-col">
+                <h3>Product Categories</h3>
+                <ul>
+                    <li><a href="#">Mobiles</a></li>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Televisions</a></li>
+                    <li><a href="#">Refrigerators</a></li>
+                    <li><a href="#">Kitchen Appliances</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Info -->
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Connect -->
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#">Facebook</a><br>
+                    <a href="#">Instagram</a><br>
+                    <a href="#">Twitter</a><br>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+
+            <!-- App Download -->
+            <div class="footer-col">
+                <h3>Download Our App</h3>
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        width="130"></a><br><br>
+                <a href="#"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/96/Download_on_the_App_Store_Badge.svg"
+                        width="130"></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">
+            © 2025 Reliance Retail Ltd. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
